@@ -81,12 +81,13 @@ public class G10EJERGUIA {
         bebidas.add("té");
         System.out.println(bebidas);
         
-        Iterator it = bebidas.iterator();
-        while (!it.hasNext()) {
-            if ("café".equals(it.hasNext())) {
-                System.out.println(it.hasNext()+" ");
+        Iterator<String> it = bebidas.iterator();
+        while (it.hasNext()) {
+            String aux = it.next();
+            if (aux.equals("café")) {
+                it.remove();
             }
         }
-        //System.out.println(bebidas);
+        System.out.println(bebidas);
     }
 }
