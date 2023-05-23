@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Diseñar un programa que lea y guarde razas de perros en un ArrayList de tipo String. El
+programa pedirá una raza de perro en un bucle, el mismo se guardará en la lista y
+después se le preguntará al usuario si quiere guardar otro perro o si quiere salir. Si decide
+salir, se mostrará todos los perros guardados en el ArrayList.
  */
 package g.pkg10.ejer.pkg01;
 
@@ -21,38 +22,26 @@ public class G10EJER01 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
-        Scanner leer = new Scanner(System.in).useDelimiter("\n");
-        RazaPerroServicio rps = new RazaPerroServicio();
-        RazaPerro rp = new RazaPerro();
-
-        String aux;
-
+        
+        Scanner leer = new Scanner(System.in);
+        ArrayList<String> razaList = new ArrayList();
         int elec = 0;
-        do {
-            System.out.println("___Menú___");
-            System.out.println("1- Cargar Perro");
-            System.out.println("2- Cargar Raza");
-            System.out.println("3- Salir");
 
-            System.out.print("Elija una opción: ");
+        do {  
+            System.out.print("Ingrese una raza de perro: ");
+            String aux = leer.next();
+            razaList.add(aux);
+            
+            System.out.println("Desea ingresar otra raza: ");
+            System.out.println("1- SI");
+            System.out.println("2- NO");
             elec = leer.nextInt();
-
-            switch (elec) {
-                case 1:
-                    break;
-                case 2:
-                    ArrayList<String> razaLista = new ArrayList<>();
-                    razaLista = rps.crearRazaPerro();
-                    rp.setRaza(razaLista);
-                    break;
-                case 3:
-                    rp.toString();
-                    //rps.mostrarRazasPerros(rp.getRaza());
-                    break;
-            }
-
-        } while (elec != 3);
-
+            
+        } while (elec !=2);
+         
+        for (String razaString : razaList) {
+            System.out.println(razaString);
+        }
+        
     }
 }

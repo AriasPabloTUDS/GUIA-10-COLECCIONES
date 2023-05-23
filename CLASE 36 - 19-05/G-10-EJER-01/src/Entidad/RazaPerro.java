@@ -15,6 +15,7 @@ public class RazaPerro {
     private ArrayList<String> raza;
 
     public RazaPerro() {
+        raza = new ArrayList();
     }
 
     public RazaPerro(ArrayList<String> raza) {
