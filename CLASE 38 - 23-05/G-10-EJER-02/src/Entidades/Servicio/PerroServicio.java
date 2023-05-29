@@ -65,8 +65,8 @@ public class PerroServicio {
             } 
         }
         if (found) {
-                System.out.println("La raza "+razaDelet+" fue eliminada de la lista");
-            } else System.out.println("La raza "+razaDelet+" no se encuentra en la lista");
+                System.out.println("La raza ''"+razaDelet+"'' fue eliminada de la lista");
+            } else System.out.println("La raza ''"+razaDelet+"'' no se encuentra en la lista");
     }
     
     public void ordenar(){

@@ -7,12 +7,7 @@ la lista ordenada.
  */
 package g.pkg10.ejer.pkg02;
 
-import Entidades.Perro;
 import Entidades.Servicio.PerroServicio;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.Scanner;
 
 /**
  *
@@ -38,27 +33,8 @@ public class G10EJER02 {
         ps.ordenar();
         System.out.println("Mostrar razas");
         ps.mostrarRazas();
-        
        
 
-        //Recorro y leo la AL local raza
-        /*
-
         
-        
-        for (String razaString : raza) {
-            System.out.println(razaString);
-        }
-        
-        System.out.println("Ordenar con Comparator");
-        
-        Collections.sort(raza);
-        
-        for (String razaString : raza) {
-            System.out.println(razaString);
-        }
-        
-    }
-         */
     }
 }
